@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nanthini's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header h1 span {
+      color: #00ffff;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    header button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #00ffff;
+      color: #1f1c2c;
+      border: none;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    header button:hover {
+      background-color: #00cfcf;
+      transform: scale(1.05);
+    }
+
+    .about {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #00ffff;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .projects .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .projects .card:hover {
+      transform: translateY(-10px);
+      background-color: rgba(0, 255, 255, 0.1);
+    }
+
+    .projects h3 {
+      color: #00ffff;
+    }
+
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      outline: none;
+    }
+
+    .contact textarea {
+      resize: none;
+    }
+
+    .contact button {
+      margin-top: 10px;
+      padding: 12px 25px;
+      background-color: #00ffff;
+      color: #1f1c2c;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #00cfcf;
+    }
+
+    @media (max-width: 600px) {
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hello, I'm <span>Monisha.G</span></h1>
+    <p>A passionate student learning web development! 🚀</p>
+    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+      View My Work
+    </button>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/160" alt="Profile picture">
+    <p>I'm a web development enthusiast who enjoys building user-friendly and responsive websites. Currently exploring HTML, CSS, JavaScript, and beyond!</p>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="card">
+      <h3>Project 1</h3>
+      <p>A responsive personal portfolio using HTML and CSS.</p>
+    </div>
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>An interactive quiz app built with JavaScript.</p>
+    </div>
+    <div class="card">
+      <h3>Project 3</h3>
+      <p>A clean and modern blog layout using only HTML & CSS.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+</body>
+</html>
